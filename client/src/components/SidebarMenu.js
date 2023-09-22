@@ -1,17 +1,20 @@
 import React from 'react';
+import '../styles.css';
+import logo from './img/logo-kyodo-branca.png';  // Importando a imagem
+import MenuCalculadoras from './MenuCalculadoras';  // Importe o componente
 
-function SidebarMenu() {
+function SidebarMenu({ onSelection }) {
+  
+  const handleClick = (selected) => {
+    onSelection(selected);
+  }
+  // Receba onSelection como uma prop
   return (
     <div className="sidebar-menu">
       <div className="logo">
-        <img src="/path/to/logo.png" alt="Logo" />
+        <img src={logo} alt="Logo" />
       </div>
-      <ul className="menu-items">
-        <li><a href="#">Opção 1</a></li>
-        <li><a href="#">Opção 2</a></li>
-        <li><a href="#">Opção 3</a></li>
-        {/* ... outras opções ... */}
-      </ul>
+      <MenuCalculadoras onSelection={onSelection} />  {/* Renderize o componente de menu aqui */}
     </div>
   );
 }

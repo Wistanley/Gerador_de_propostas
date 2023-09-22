@@ -1,0 +1,62 @@
+.sidebar-menu {
+    width: 200px;
+    /* Largura do menu lateral */
+    height: 100vh;
+    /* Torna o menu da altura total da janela */
+    background-color: #003900;
+    /* Cor de fundo do menu */
+    position: fixed;
+    /* Fixa o menu no lado esquerdo */
+    overflow-y: auto;
+    /* Adiciona rolagem se o conteúdo for muito longo */
+}
+
+.logo {
+    padding: 10px;
+    /* Espaçamento interno para a logo */
+    text-align: center;
+    /* Centraliza a logo */
+    background-color: #0a5a0a;
+    /* Cor de fundo da área da logo */
+}
+
+.logo img{
+    width: 180px;
+}
+
+.menu-items {
+    list-style-type: none;
+    /* Remove os marcadores de lista */
+    margin: 0;
+    /* Remove margem */
+    padding: 0;
+    /* Remove padding */
+}
+
+.menu-items li a {
+    display: block;
+    /* Torna o link um bloco */
+    padding: 10px 20px;
+    /* Espaçamento interno para os links */
+    color: white;
+    /* Cor do texto do link */
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+}
+
+.menu-items li a:hover {
+    background-color: #0a5a0a;
+    /* Cor de fundo do link ao passar o mouse */
+}
+
+.dashboard-container {
+    display: flex;
+}
+
+.dashboard-content {
+    margin-left: 200px;  /* igual à largura do menu lateral */
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(203, 255, 238);
+    height: 100vh;
+}

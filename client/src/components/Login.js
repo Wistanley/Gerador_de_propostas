@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -19,7 +20,7 @@ function Login() {
 
       if (response.status === 200) {
         navigate("/dashboard");
-    }      
+      }
 
       setMessage(response.data.message);
     } catch (error) {
@@ -28,30 +29,32 @@ function Login() {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Usuário:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Senha:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Entrar</button>
-      </form>
-      {message && <p>{message}</p>}
+    <div class="container">
+      <div class="formLogin">
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>Usuário:</label>
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label>Senha:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit">Entrar</button>
+        </form>
+        {message && <p>{message}</p>}
+      </div>
     </div>
   );
 }

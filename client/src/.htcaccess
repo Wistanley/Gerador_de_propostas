@@ -1,0 +1,8 @@
+# Ativar reescrita de URL
+RewriteEngine On
+
+# Redirecionar todas as solicitações para o index.html
+# Isso é útil para aplicativos de página única (SPA) como um projeto React
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ login.js [L]

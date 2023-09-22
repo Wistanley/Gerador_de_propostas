@@ -1,5 +1,7 @@
 // MenuCalculadoras.js
 import React from 'react';
+import '../styles.css';
+
 function MenuCalculadoras({ onSelection }) {
   return (
     <ul>

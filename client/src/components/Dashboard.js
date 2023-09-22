@@ -3,7 +3,6 @@ import SidebarMenu from './SidebarMenu';
 import '../styles.css';  
 import BarraRedonda from './calculadoras/BarraRedonda.js';
 import BarraChata from './calculadoras/BarraChata';
-// ... importe outros componentes ...
 
 function Dashboard() {
   const [selectedComponent, setSelectedComponent] = useState(null);

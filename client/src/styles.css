@@ -60,3 +60,25 @@
     background-color: rgb(203, 255, 238);
     height: 100vh;
 }
+
+ul{
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 5px 0;
+}
+
+li a{
+    text-decoration: none;
+    color: aliceblue;
+    display: block;
+    /* Torna o link um bloco */
+    padding: 10px 20px;
+    /* Espaçamento interno para os links */
+    margin: 0;
+}
+
+li a:hover{
+    background-color: #0a5a0a;
+}
